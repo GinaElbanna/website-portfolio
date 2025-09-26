@@ -4,38 +4,39 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
 // ======== THEME TOGGLE ========
 (function themeToggle() {
-  const btn = $('#theme-toggle');
+  const btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
   const STORAGE_KEY = 'theme'; // 'light' | 'dark'
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
 
   function applyTheme(mode) {
-    // tell the UA to render form controls/scrollbars appropriately
+    // set attribute for CSS variables
+    document.documentElement.setAttribute('data-theme', mode);
+    // hints for form controls/scrollbars
     document.documentElement.style.colorScheme = mode === 'light' ? 'light' : 'dark';
     btn.textContent = mode === 'light' ? '🌙 Dark' : '☀️ Light';
     localStorage.setItem(STORAGE_KEY, mode);
   }
 
-  // initialize from storage or system
-  const initial = localStorage.getItem(STORAGE_KEY) || (prefersDark.matches ? 'dark' : 'light');
+  // init: stored → system → default('dark')
+  const initial = localStorage.getItem(STORAGE_KEY) || (mq.matches ? 'dark' : 'light');
   applyTheme(initial);
 
-  // toggle on click
   btn.addEventListener('click', () => {
-    const current = localStorage.getItem(STORAGE_KEY) || (prefersDark.matches ? 'dark' : 'light');
+    const current = document.documentElement.getAttribute('data-theme') || initial;
     applyTheme(current === 'dark' ? 'light' : 'dark');
   });
 
-  // optional: react if system preference changes (only if user hasn't set a manual choice yet)
-  prefersDark.addEventListener?.('change', e => {
+  // if user hasn't chosen manually, follow system changes
+  mq.addEventListener?.('change', e => {
     if (!localStorage.getItem(STORAGE_KEY)) {
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
 
-  // keyboard shortcut: D toggles theme
-  addEventListener('keydown', (e) => {
+  // keyboard: D
+  addEventListener('keydown', e => {
     if (e.key.toLowerCase() === 'd') btn.click();
   });
 })();
@@ -68,4 +69,13 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
   // default state: show all
   applyFilter('all');
+})();
+
+// ======== SKILL BARS FROM data-level ========
+(function hydrateSkillMeters() {
+  document.querySelectorAll('.meter > i[data-level]').forEach(i => {
+    const n = parseInt(i.getAttribute('data-level'), 10);
+    const clamped = Number.isFinite(n) ? Math.max(0, Math.min(100, n)) : 0;
+    i.style.width = clamped + '%';
+  });
 })();

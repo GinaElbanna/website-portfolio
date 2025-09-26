@@ -30,8 +30,9 @@
   } -->
 </head>
 <body>
-    <div class="container nav" role="navigation" aria-label="Main"></div>
     <header>
+        <div class="container nav" role="navigation" aria-label="Main">
+        <a class="brand" href="#top" aria-label="Home">Gina Elbanna</a>
         <nav>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
@@ -40,7 +41,8 @@
             <a href="#contact">Contact</a>
         </nav>
         <button id="theme-toggle" class="btn" aria-live="polite">🌙 Dark</button>
-    </header>
+        </div>
+  </header>
 
     <main id="top" class="container">
         <section class="hero" id="home">
@@ -53,7 +55,7 @@
                     <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">View Résumé</a>
                     <a class="btn" href="https://github.com/GinaElbanna" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
                     <a class="btn" href="https://www.linkedin.com/in/gina-elbanna/" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
-
+                </div>
                 <p class="small mt-10">Actively seeking: Software Engineer / Full-Stack / Backend roles.</p>
             </div>
 
@@ -70,7 +72,7 @@
 
         <section id="projects">
             <h2>Selected Projects</h2>
-            <p class="small">"small">Each card links to code and/or a live demo. Filter by tech:
+            <p class="small">Each card links to code and/or a live demo. Filter by tech:
                 <button class="btn" data-filter="all">All</button>
                 <button class="btn" data-filter="firebase">Firebase</button>
                 <button class="btn" data-filter="java">Java</button>
@@ -86,8 +88,8 @@
                         <span class="tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a class="btn" href=""></a>
-                        <a class="btn" href=""></a>
+                        <a class="btn" href="https://github.com/SeanFritz/TutoringProject" target="_blank" rel="noopener">Code</a>
+                        <a class="btn" href="https://monmouth-university-tutoring.web.app" target="_blank" rel="noopener">Live Demo</a>
                     </div>
                 </article>
 
@@ -96,6 +98,9 @@
                         <p>Flipbook-style digital journal using Canvas 2D API + Flipbook.js. Firestore + Auth for 20+ users.</p>
                     <div class="tags">
                         <span class="tag">Canvas</span><span class="tag">JavaScript</span><span class="tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn" href="https://journal-b4468.web.app" target="_blank" rel="noopener">Live Demo</a>
                     </div>
                 </article>
 
@@ -155,20 +160,20 @@
             <div>
                 <h2 id="skills">Skills</h2>
                 <div class="skill-grid">
-                    <div class="skill"><span>Java</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>C++</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>Python</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>JavaScript</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>Firebase</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>SQL / NoSQL</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>Kotlin</span><div class="meter"><i style="width:90%"></i></div></div>
-                    <div class="skill"><span>OCaml</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>Java</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>C++</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>Python</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>JavaScript</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>Firebase</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>SQL / NoSQL</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>Kotlin</span><div class="meter"><i data-level="90"></i></div></div>
+                    <div class="skill"><span>OCaml</span><div class="meter"><i data-level="90"></i></div></div>
                 </div>
                 <p class="small">Also: Github, Wireshark, MySQL, PHP, VS Code, Eclipse, Android Studio</p>
             </div>
         </section>
 
-        <section id="eduction">
+        <section id="education">
             <h2>Education & Honors</h2>
             <div class="cards">
                 <div class="card">
@@ -203,7 +208,7 @@
         <footer>
             <div class="container">
             <div class="grid-2">
-                <div class="small">© 2025<span id="year"></span> Gina Elbanna. All rights reserved.</div>
+                <div class="small">© <span id="year"></span> Gina Elbanna. All rights reserved.</div>
                 <div style="text-align:right">
                 <a class="small" href="#top">Back to top ↑</a>
                 </div>

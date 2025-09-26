@@ -1,5 +1,6 @@
 /* ========= THEME TOKENS ========= */
 :root {
+  /* default (dark) */
   --bg: #0b1220;
   --bg-alt: #0e1729;
   --text: #e6e6e6;
@@ -7,9 +8,39 @@
   --accent: #0ea5e9;
   --card: #121a2e;
   --border: #23324d;
+
+  --header-bg: rgba(11, 18, 32, .8);
+
 }
+
+/* explicit theme overrides (driven by JS) */
+:root[data-theme="light"] {
+  --bg: #f7fafc;
+  --bg-alt: #ffffff;
+  --text: #0f172a;
+  --muted: #42526b;
+  --accent: #0ea5e9;
+  --card: #ffffff;
+  --border: #e2e8f0;
+
+  --header-bg: rgba(146, 145, 145, 0.9);
+}
+:root[data-theme="dark"] {
+  /* same as default; you can keep this for clarity or remove */
+  --bg: #0b1220;
+  --bg-alt: #0e1729;
+  --text: #e6e6e6;
+  --muted: #a8b2d1;
+  --accent: #0ea5e9;
+  --card: #121a2e;
+  --border: #23324d;
+
+  --header-bg: rgba(11, 18, 32, .8);
+}
+
+/* OPTIONAL fallback to system preference only if no data-theme attribute set */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --bg: #f7fafc;
     --bg-alt: #ffffff;
     --text: #0f172a;
@@ -17,8 +48,11 @@
     --accent: #0ea5e9;
     --card: #ffffff;
     --border: #e2e8f0;
+
+    --header-bg: rgba(255, 255, 255, .8);
   }
 }
+
 
 /* ========= BASE / RESET ========= */
 * { box-sizing: border-box; }
@@ -45,14 +79,12 @@ h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.05; margin: 12px 0 8px; }
 /* ========= HEADER / NAV ========= */
 header {
   position: sticky; top: 0;
-  background: rgba(11, 18, 32, .8);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   z-index: 10;
 }
-@media (prefers-color-scheme: light) {
-  header { background: rgba(255, 255, 255, .8); }
-}
+
 .nav {
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; padding: 12px 0;
