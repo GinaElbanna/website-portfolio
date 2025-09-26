@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gina Elbanna — Software Engineer</title>
-  <meta name="description" content="Gina Elbanna — CS graduate and full-stack developer. Projects in Firebase, Java, Python, C++, and more.">
-  <meta name="author" content="Gina Elbanna">
-  <meta property="og:title" content="Gina Elbanna — Software Engineer">
-  <meta property="og:description" content="Full-stack developer with projects in Firebase, Java, Python, and C++.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="preload" as="font" href="assets/Inter-VariableFont.ttf" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <script type="application/ld+json">
-  {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gina Elbanna — Software Engineer</title>
+    <meta name="description" content="Gina Elbanna - CS graduate and full-stack developer. Projects in Firebase, Java, Python, and C++.">
+    <meta name="author" content="Gina Elbanna">
+    <meta name="theme-color" content="#0aa449">
+    <meta property="og:title" content="Gina Elbanna - Software Engineer">
+    <meta property="og:description" content="Full-stack developer with projects in Firebase, Java, Python, and C++.">
+    <meta property="og:type" content="website">
+    <!-- <link rel="preload" as="font" href="assets/Inter-VariableFont.ttf" type="font/ttf" crossorigin"> -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
+    <!-- dishonest and lame to keep this without understanding it -->
+    <!-- {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Gina Elbanna",
@@ -26,236 +27,188 @@
     ],
     "alumniOf": "Monmouth University",
     "email": "mailto:gina.elbanna246@gmail.com"
-  }
-  </script>
-  <style>
-    /* Minimal inline to avoid FOUC for critical hero */
-    :root {
-      --bg: #0b1220; --bg-alt:#0e1729; --text:#e6e6e6; --muted:#a8b2d1;
-      --accent:#0ea5e9; --card:#121a2e; --border:#23324d;
-    }
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f7fafc; --bg-alt:#ffffff; --text:#0f172a; --muted:#42526b; --accent:#0ea5e9; --card:#ffffff; --border:#e2e8f0;}
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;background:var(--bg);color:var(--text);}
-    a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:rgba(11,18,32,.8);backdrop-filter: blur(8px);border-bottom:1px solid var(--border);z-index:10}
-    @media(prefers-color-scheme: light){ header{background:rgba(255,255,255,.8);} }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
-    .nav a{padding:8px 12px;border-radius:10px;text-decoration:none}
-    .nav a:hover{background:var(--card)}
-    .brand{font-weight:800;letter-spacing:.3px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);text-decoration:none}
-    .btn.primary{background:var(--accent);border-color:transparent;color:#001018;font-weight:700}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:40px 0}
-    .pill{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:14px}
-    h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:12px 0 8px}
-    .lead{font-size:clamp(16px,2.6vw,18px);color:var(--muted);max-width:60ch}
-    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
-    .card h3{margin:6px 0 8px;font-size:18px}
-    .tags{display:flex;flex-wrap:wrap;gap:6px}
-    .tag{padding:4px 8px;border-radius:999px;border:1px solid var(--border);font-size:12px;color:var(--muted)}
-    section{padding:28px 0}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .timeline{border-left:2px solid var(--border);padding-left:16px}
-    .timeline .item{margin-bottom:18px}
-    .sr-only{position:absolute;left:-9999px}
-    footer{border-top:1px solid var(--border);margin-top:40px;padding:24px 0;color:var(--muted)}
-    .small{font-size:14px;color:var(--muted)}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;border:1px solid var(--border);padding:2px 6px;border-radius:6px}
-    .project-links{display:flex;gap:8px;flex-wrap:wrap}
-    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;}
-    .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
-    .skill{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);border-radius:12px;padding:10px;background:var(--card)}
-    .meter{height:8px;background:var(--border);border-radius:999px;overflow:hidden;flex:1;margin-left:10px}
-    .meter > i{display:block;height:100%;background:var(--accent);width:0%}
-    .hide{display:none}
-    @media (max-width: 880px){ .hero{grid-template-columns:1fr} }
-  </style>
+  } -->
 </head>
 <body>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Home">Gina Elbanna</a>
-      <nav class="hide-on-mobile">
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="btn">Contact</a>
-      </nav>
-      <button id="theme-toggle" class="btn" aria-live="polite">🌙 Dark</button>
-    </div>
-  </header>
+    <div class="container nav" role="navigation" aria-label="Main"></div>
+    <header>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="btn" aria-live="polite">🌙 Dark</button>
+    </header>
 
-  <main id="top" class="container">
-    <section class="hero" id="home">
-      <div>
-        <span class="pill">Backend &amp; Full-Stack Developer</span>
-        <h1>Hi, I’m Gina — I build clean, scalable apps.</h1>
-        <p class="lead">Recent CS graduate (GPA 3.9) with hands-on projects in Firebase, Java, Python, and C++. I care about performance, security, and user-friendly design.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-          <a class="btn primary" href="assets/Gina_Elbanna_Resume.pdf" target="_blank" rel="noopener">View Résumé</a>
-          <a class="btn" href="https://github.com/GinaElbanna" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/gina-elbanna/" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
-        </div>
-        <p class="small" style="margin-top:10px">Actively seeking: Software Engineer / Full-Stack / Backend roles.</p>
-      </div>
-      <div class="card">
-        <h3>Quick Highlights</h3>
-        <ul>
-          <li>Featured project demo by university faculty.</li>
-          <li>Formal verification research assistant.</li>
-          <li>Club president — Monmouth Gamers United.</li>
-        </ul>
-        <p class="small">Based in Avenel, NJ • Open to hybrid/remote.</p>
-      </div>
-    </section>
+    <main id="top" class="container">
+        <section class="hero" id="home">
+            <div>
+                <span class="pill">Backend &amp; Full-Stack Developer</span>
+                <h1>Hi, I’m Gina — I build clean, scalable apps.</h1>
+                <p class="lead">Recent CS graduate (GPA 3.9) with hands-on projects in Firebase, Java, Python, and C++. I care about performance, security, and user-friendly design.</p>
+                
+                <div class="actions">
+                    <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">View Résumé</a>
+                    <a class="btn" href="https://github.com/GinaElbanna" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
+                    <a class="btn" href="https://www.linkedin.com/in/gina-elbanna/" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn</a>
 
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <p class="small">Each card links to code and/or a live demo. Filter by tech: 
-        <button class="btn" data-filter="all">All</button>
-        <button class="btn" data-filter="firebase">Firebase</button>
-        <button class="btn" data-filter="java">Java</button>
-        <button class="btn" data-filter="python">Python</button>
-        <button class="btn" data-filter="cpp">C++</button>
-      </p>
-      <div class="cards" id="project-cards">
-        <!-- Tutoring App -->
-        <article class="card" data-tags="firebase web">
-          <h3 class="mono">MU Tutoring Web App</h3>
-          <p>Role-based auth, scheduling for 30+ students/tutors. Built with Firebase (Auth + Firestore) and a custom UI.</p>
-          <div class="tags">
-            <span class="tag">Firebase</span><span class="tag">Auth</span><span class="tag">NoSQL</span>
-          </div>
-          <div class="project-links">
-            <a class="btn" href="https://github.com/SeanFritz/TutoringProject" target="_blank" rel="noopener">Code</a>
-            <a class="btn" href="https://monmouth-university-tutoring.web.app" target="_blank" rel="noopener">Live Demo</a>
-          </div>
-        </article>
-        <!-- Web Journal -->
-        <article class="card" data-tags="firebase web">
-          <h3 class="mono">Web Journal</h3>
-          <p>Flipbook-style digital journal using Canvas 2D API + Flipbook.js. Firestore + Auth for 20+ users.</p>
-          <div class="tags">
-            <span class="tag">Canvas</span><span class="tag">JavaScript</span><span class="tag">Firebase</span>
-          </div>
-          <!-- Replace with your repo link if public -->
-        </article>
-        <!-- Fitness App -->
-        <article class="card" data-tags="python web">
-          <h3 class="mono">Fitness App</h3>
-          <p>Tracked workouts and routines; focused on clean data models and maintainable code.</p>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span>
-          </div>
-          <div class="project-links">
-            <a class="btn" href="https://github.com/GinaElbanna/Fitness-App" target="_blank" rel="noopener">Code</a>
-          </div>
-        </article>
-        <!-- Notes App -->
-        <article class="card" data-tags="web">
-          <h3 class="mono">Noted</h3>
-          <p>Notes app with fast search and a clean, responsive UI.</p>
-          <div class="tags">
-            <span class="tag">JavaScript</span><span class="tag">LocalStorage</span>
-          </div>
-          <div class="project-links">
-            <a class="btn" href="https://github.com/GinaElbanna/Notes-App" target="_blank" rel="noopener">Code</a>
-          </div>
-        </article>
-        <!-- Game -->
-        <article class="card" data-tags="cpp">
-          <h3 class="mono">Dusty Hero (Game)</h3>
-          <p>2D adventure gameplay. Level design & mechanics; deployed via GD.games.</p>
-          <div class="tags">
-            <span class="tag">Game Dev</span><span class="tag">C++</span>
-          </div>
-          <div class="project-links">
-            <a class="btn" href="https://gd.games/marshroom/dusty-hero" target="_blank" rel="noopener">Play</a>
-          </div>
-        </article>
-      </div>
-    </section>
+                <p class="small mt-10">Actively seeking: Software Engineer / Full-Stack / Backend roles.</p>
+            </div>
 
-    <section id="experience" class="grid-2">
-      <div>
-        <h2>Experience</h2>
-        <div class="timeline">
-          <div class="item">
-            <strong>Research Assistant</strong> — Monmouth University (Oct 2024 – May 2025)
-            <div class="small">Formal verification of relational quantitative properties; improved efficiency of tools.</div>
-          </div>
-          <div class="item">
-            <strong>CS Lab Assistant</strong> — Monmouth University (Oct 2023 – May 2025)
-            <div class="small">Tutored Python &amp; Java, simplified algorithms and data structures for peers.</div>
-          </div>
-          <div class="item">
-            <strong>Instructor</strong> — iCode (Aug 2024 – Sep 2024)
-            <div class="small">Taught robotics fundamentals; guided students building 14 VEX robots.</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h2 id="skills">Skills</h2>
-        <div class="skill-grid">
-          <div class="skill"><span>Java</span><div class="meter"><i style="width:90%"></i></div></div>
-          <div class="skill"><span>C++</span><div class="meter"><i style="width:85%"></i></div></div>
-          <div class="skill"><span>Python</span><div class="meter"><i style="width:70%"></i></div></div>
-          <div class="skill"><span>JavaScript</span><div class="meter"><i style="width:70%"></i></div></div>
-          <div class="skill"><span>Firebase</span><div class="meter"><i style="width:80%"></i></div></div>
-          <div class="skill"><span>SQL / NoSQL</span><div class="meter"><i style="width:65%"></i></div></div>
-          <div class="skill"><span>Kotlin</span><div class="meter"><i style="width:40%"></i></div></div>
-          <div class="skill"><span>OCaml</span><div class="meter"><i style="width:35%"></i></div></div>
-        </div>
-        <p class="small">Also: GitHub, Wireshark, MySQL, PHP, VS Code, Eclipse, Android Studio.</p>
-      </div>
-    </section>
+            <div class="card">
+                <h3>Quick Highlights</h3>
+                <ul>
+                    <li>Featured project demo by university faculty.</li>
+                    <li>Formal verification research assistant.</li>
+                    <li>Club president — Monmouth Gamers United.</li>
+                </ul>
+                <p class="small">Based in NJ • Open to hybrid/remote.</p>
+            </div>
+        </section>
 
-    <section id="education">
-      <h2>Education & Honors</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Monmouth University — B.S. Computer Science (May 2025)</h3>
-          <p>GPA: 3.9 • Upsilon Pi Epsilon • Dean’s List (2022, 2024, 2025)</p>
-          <p class="small">Relevant courses: Advanced OOP (C++), Cybersecurity, Networks, Operating Systems, Game Dev.</p>
-        </div>
-        <div class="card">
-          <h3>NJIT — Computer Science (Sep 2022 – May 2023)</h3>
-          <p>Completed 25 credits • Advanced problem solving in Java.</p>
-        </div>
-      </div>
-    </section>
+        <section id="projects">
+            <h2>Selected Projects</h2>
+            <p class="small">"small">Each card links to code and/or a live demo. Filter by tech:
+                <button class="btn" data-filter="all">All</button>
+                <button class="btn" data-filter="firebase">Firebase</button>
+                <button class="btn" data-filter="java">Java</button>
+                <button class="btn" data-filter="python">Python</button>
+                <button class="btn" data-filter="cpp">C++</button>
+            </p>
+            
+            <div class="cards" id="project-cards">
+                <article class="card" data-tags="firebase">
+                    <h3 class="mono">MU Tutoring Web App</h3>
+                    <p>Role-based auth, scheduling for 30+ students/tutors. Built with Firebase (Auth + Firestore) and a custom UI.</p>
+                    <div class="tags">
+                        <span class="tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn" href=""></a>
+                        <a class="btn" href=""></a>
+                    </div>
+                </article>
 
-    <section id="leadership">
-      <h2>Leadership & Involvement</h2>
-      <ul>
-        <li>President — Monmouth Gamers United Club.</li>
-        <li>Member — IEEE/ACM Student Chapter.</li>
-      </ul>
-    </section>
+                <article class="card" data-tags="firebase">
+                    <h3 class="mono">Web Journal</h3>
+                        <p>Flipbook-style digital journal using Canvas 2D API + Flipbook.js. Firestore + Auth for 20+ users.</p>
+                    <div class="tags">
+                        <span class="tag">Canvas</span><span class="tag">JavaScript</span><span class="tag">Firebase</span>
+                    </div>
+                </article>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email <a href="mailto:gina.elbanna246@gmail.com">gina.elbanna246@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/gina-elbanna/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-      <p class="small">Tip: Press <span class="kbd">D</span> to toggle dark mode.</p>
-    </section>
-  </main>
+                <article class="card" data-tags="web">
+                    <h3 class="mono">Noted</h3>
+                    <p>Notes app with fast search and a clean, responsive UI.</p>
+                    <div class="tags">
+                    <span class="tag">JavaScript</span><span class="tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                    <a class="btn" href="https://github.com/GinaElbanna/Notes-App" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
 
-  <footer>
-    <div class="container">
-      <div class="grid-2">
-        <div class="small">© <span id="year"></span> Gina Elbanna. All rights reserved.</div>
-        <div style="text-align:right">
-          <a class="small" href="#top">Back to top ↑</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
+                <article class="card" data-tags="python web">
+                    <h3 class="mono">Fitness App</h3>
+                    <p>Tracked workouts and routines; focused on clean data models and maintainable code.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn" href="https://github.com/GinaElbanna/Fitness-App" target="_blank" rel="noopener">Code</a>
+                    </div>
+                </article>
+
+                <article class="card" data-tags="cpp">
+                    <h3 class="mono">Dusty Hero (Game)</h3>
+                    <p>2D adventure gameplay. Level design & mechanics; deployed via GD.games.</p>
+                    <div class="tags">
+                        <span class="tag">Game Dev</span><span class="tag">C++</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="btn" href="https://gd.games/marshroom/dusty-hero" target="_blank" rel="noopener">Play</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="grid-2">
+            <div>
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="item">
+                        <strong>Research Assistant</strong>  — Monmouth University (Oct 2024 – May 2025)
+                        <div class="small">Formal verification of relational quantitative properties; improved efficiency of tools.</div>
+                    </div>
+                    <div class="item">
+                        <strong>CS Lab Assistant</strong>  — Monmouth University (Oct 2023 – May 2025)
+                        <div class="small">Tutored Python &amp; Java, simplified algorithms and data structures for peers.</div>
+                    </div>
+                    <div class="item">
+                        <strong>Instructor</strong> — iCode (Aug 2024 – Sep 2024)
+                        <div class="small">Taught robotics fundamentals; guided students building 14 VEX robots.</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 id="skills">Skills</h2>
+                <div class="skill-grid">
+                    <div class="skill"><span>Java</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>C++</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>Python</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>JavaScript</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>Firebase</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>SQL / NoSQL</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>Kotlin</span><div class="meter"><i style="width:90%"></i></div></div>
+                    <div class="skill"><span>OCaml</span><div class="meter"><i style="width:90%"></i></div></div>
+                </div>
+                <p class="small">Also: Github, Wireshark, MySQL, PHP, VS Code, Eclipse, Android Studio</p>
+            </div>
+        </section>
+
+        <section id="eduction">
+            <h2>Education & Honors</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Monmouth University — B.S. Computer Science (May 2025)</h3>
+                    <p>GPA: 3.9 • Upsilon Pi Epsilon • Dean’s List (2022, 2024, 2025)</p>
+                    <p class="small">Relevant courses: Advanced OOP (C++), Cybersecurity, Networks, Operating Systems, Game Dev.</p>
+                </div>
+                <div class="card">
+                    <h3>NJIT - Computer Science (Sep 2022 - May 2023)</h3>
+                    <p>Completed 25 credits • Advanced problem solving in Java</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership">
+            <h2>Leadership & Involvement</h2>
+            <ul>
+                <li>President - Monmouth Gamers United Club.</li>
+                <li>Member - IEEE/ACM Student Chapter</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email <a href="mailto:gina.elbanna246@gmail.com">gina.elbanna246@gmail.com</a> or connect on
+                <a href="https://www.linkedin.com/in/gina-elbanna/" target="_blank" rel="noopener">LinkedIn</a>.
+            </p>
+            <p class="small">Tip: Press <span class="kbd">D</span> to toggle dark mode.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+            <div class="grid-2">
+                <div class="small">© 2025<span id="year"></span> Gina Elbanna. All rights reserved.</div>
+                <div style="text-align:right">
+                <a class="small" href="#top">Back to top ↑</a>
+                </div>
+            </div>
+            </div>
+        </footer>
+    </body>
 </html>
