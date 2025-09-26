@@ -132,12 +132,16 @@ h1{ font-size: clamp(34px, 5vw, 60px); line-height:1.05; margin:12px 0 8px; }
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
   border-color: transparent; color: #031225; font-weight:700;
 }
-.card{
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps footer pinned */
   background: color-mix(in oklab, var(--card) 92%, transparent);
-  border:1px solid var(--border);
-  border-radius:16px; padding:16px;
-  box-shadow: 0 18px 40px -22px rgba(0,0,0,.5); /* subtle lift, helps hero */
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
 }
+
 .card h3{ margin:6px 0 8px; font-size:18px; }
 .actions{ display:flex; gap:10px; flex-wrap:wrap; }
 
@@ -149,6 +153,7 @@ h1{ font-size: clamp(34px, 5vw, 60px); line-height:1.05; margin:12px 0 8px; }
   gap: clamp(20px, 4vw, 36px); align-items:center;
 }
 @media (max-width: 880px){ .hero .container{ grid-template-columns:1fr; } }
+.hero .container > div:first-child { max-width: 65ch; }
 
 .pill{
   display:inline-block; padding:6px 10px;
@@ -160,7 +165,12 @@ h1{ font-size: clamp(34px, 5vw, 60px); line-height:1.05; margin:12px 0 8px; }
 .cards{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:16px; }
 .tags{ display:flex; flex-wrap:wrap; gap:6px; }
 .tag{ padding:4px 8px; border-radius:999px; border:1px solid var(--border); font-size:12px; color:var(--muted); }
-.project-links{ display:flex; gap:8px; flex-wrap:wrap; }
+.project-links {
+  margin-top: auto; /* pushes buttons down */
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 
 /* Experience / Skills */
 .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
